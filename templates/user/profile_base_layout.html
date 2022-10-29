@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title> Profile page</title>
+        
+        <!-- CSS FRAMEWORKS REQUIRED -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <!-- STYLINGS -->
+        <link rel="stylesheet" href="/static/common-styles.css">
+        
+        {% block headcontent %}
+        {% endblock %}
+        
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-success">
+            
+           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="{% url 'index' %}">Home <span class="sr-only"></span></a>
+                    <a class="nav-item nav-link" href="{% url 'index' %}">Logout</a>
+                </div>
+            </div>
+        </nav>
+        
+        <br> <br> <br>
+     
+        <div class="container-fluid row">
+        
+                <!--SIDE PANEL BEGINS -->
+                <section id="side_panel" class="col-3 bg-dark">
+                    
+                    <!-- OPERATIONS -->
+                    <a href="AccountRegister" class="current side" id="status">Account Register</a> <br> <br>
+                    
+                    <a href="Status" class="current side" id="status">Account Details</a> <br> <br>
+                    
+                    <a href="MoneyTransfer" class="side" id="transfer">Money Transfer</a> <br> <br>
+                    
+                    <a href="Loan" class="side" id="loan">Loan application</a> <br> <br>
+                    
+                    <a href="Passbook" class="side" id="Passbook">Passbook</a> <br> <br>
+                    
+                    <a href="OnlinePay" class="side" id="online">Online Payment</a> <br> <br>
+                    
+                    <a href="Statement" class="side" id="settings">Statement</a> <br> <br>
+                    
+                                   
+                </section>
+                <!-- SIDE PANEL ENDS -->
+        
+                {% block bodycontent %}
+                <img src="/static/images/logo.jpg" class="container btn">
+                {% endblock %}
+
+            </div>
+       
+        <!-- FOOTER -->
+        <section class="foot bg-success text-white">
+            <div class="text-center">
+                &copy; Website created with <i class="fa fa-heart" style="color: red;"></i> by vivek    
+                <br>
+                <i></i><a>&copy; Bank Management System </a>
+            </div>
+        </section>   
+        
+
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User information</title>
+</head>
+
+<body>
+<h1>User information</h1>
+{%if user %}
+<table>
+<thead>
+
+<th>First Name</th>
+<th>Last Name</th>
+<th>Email</th>
+<th>password</th>
+<th>password confirm</th>
+<th>phone number</th>
+
+
+<thead>
+{% for use in user %}
+<tr>
+
+<td>{{use.first_name}}</td>
+<td>{{use.last_name}}</td>
+<td>{{use.email}}</td>
+<td>{{use.password }}</td>
+<td>{{use.password_confirm}}</td>
+<td>{{use.phone_number}}</td>
+
+</tr>
+{% endfor %}
+</table>
+{% else %}
+<p>no data</p>
+{%endif%}
+
+
+</body>
+
+</html>

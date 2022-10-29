@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account details</title>
+  <link rel="stylesheet" href="{% static "user/register.css" %}"
+</head>
+<body>
+  <div class="container">
+    <h1>Fill the Form</h1>
+    <form class="registartion-form" method ="post">{% csrf_token %}
+    {{form}}
+    {% if empy %}
+      <table>
+      {% for empy in empy %}
+
+        <tr>
+          <td><label>Account Number:</label></td>
+          <td><label>{{empy.account_number}} </label></td>
+        </tr>
+        <tr>
+          <td><label >IFSC Code:</label></td>
+          <td><label> {{empy.ifsc_code}} </label></td>
+        <tr>
+          <td><label >Balance:</label></td>
+          <td><label> {{empy.balance}}</label></td>
+        </tr>
+        <tr>
+          <td><label>UserName:</label></td>
+          <td><label>{{empy.user_name}}</label></td>
+        </tr> 
+        <tr>
+          <td><button ><a href="{% url 'update' empy.id%}">update</a> </button></td>
+          <td ><button ><a href="{% url 'delete' empy.id%}">delete</a> </button></td>
+          <td ><button ><a href="{% url 'profile' %}">Back</a> </button></td>
+        </tr>
+          
+     {% endfor %}                  
+      </table>
+ {% else %}
+ <h1>No Data</h1>
+{% endif %}     
+    </form>
+  </div>
+</body>
+</html>

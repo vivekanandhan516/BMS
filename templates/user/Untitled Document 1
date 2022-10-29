@@ -1,0 +1,66 @@
+ <tr>
+          <td><label for="gender">Gender:</label></td>
+          <td>
+            Male: <input type="radio" name="gender" value="male">
+            Female: <input type="radio" name="gender" value="female">
+            Other: <input type="radio" name="gender" value="other">
+          </td>
+        </tr>
+        <tr>
+          <td><label for="language">language</label></td>
+          <td>
+            <select name="language" id="language">
+              <option value="">Select language</option>
+              <option value="English">English</option>
+              <option value="Spanish">Spanish</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Arabic">Arabic</option>
+              <option value="Russian">Russian</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="zipcode">Zip Code:</label></td>
+          <td><input type="number" name="zipcode" id="zipcode"></td>
+        </tr>
+        <tr>
+          <td><label for="about">About:</label></td>
+          <td><textarea name="about" id="about" placeholder="Write about yourself..."></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" class="submit" value="Register" /></td>
+        </tr>
+        
+
+        <tr>
+          <td>first Name:</td>
+          <td>
+          <input type="text" name="first_name" id="first_name"  placeholder="first name" >
+          </td>
+        </tr>
+        <tr>
+          <td><label for="last_name">Last Name:</label></td>
+          <td><input type="text" name="last_name" id="last_name" placeholder="last name"></td>
+        </tr>        
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="text" name="email" id="email" placeholder="your email"></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password:</label></td>
+          <td><input type="password" name="password" id="password"></td>
+        </tr>
+        <tr>
+          <td><label for="password_confirm">password_confirm:</label></td>
+          <td><input type="password" name="password_confirm" id="password_confirm"></td>
+        </tr>        
+        <tr>
+          <td><label>Phone Number:</label></td>
+          <td><input type="number" name="phone_number" id="phone_number"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="submit" class="submit" value="submit" /></td>
+        </tr>        
+        
+        
+        

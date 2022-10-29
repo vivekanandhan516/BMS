@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Detalis</title>
+  <link rel="stylesheet" href="{% static "user/register.css" %}"
+</head>
+<body>
+  <div class="container">
+    <h1>Fill The Form </h1>
+    <form class="registartion-form"action="edit/" method="POST">{% csrf_token %}
+      <table>
+        <tr>
+          <td><label>Account Number:</label></td>
+          <td><input type="number" name="account_number"></td>
+          <tr>
+          <td colspan="2"><input type="submit" class="submit" value="submit" /></td>
+        </tr>
+        </tr>  
+         </table>   
+    </form>
+  </div>
+</body>
+</html>
